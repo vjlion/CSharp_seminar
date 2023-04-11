@@ -1,0 +1,15 @@
+int GetNumberFromRange(int start, int end)
+{
+    int number = new Random().Next(start, end + 1);
+    return number;
+}
+int Delnum(int number)
+{
+    int digit3 = number % 10; // 3
+    int digit1 = number / 100; // 1
+    int result = digit1 * 10 + digit3;
+    return result;
+}
+int randomNunber = GetNumberFromRange(100,999);
+int numberWithoutSecond = Delnum(randomNunber) ;
+Console.WriteLine($"Число {randomNunber} без второго числа {numberWithoutSecond}");
